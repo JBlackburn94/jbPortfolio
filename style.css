@@ -13,27 +13,6 @@ body {
     color: rgb(85, 0, 255);
 }
 
-h1 {
-    text-transform: uppercase;
-    font-size: 4rem;
-    background-image: linear-gradient(90deg, rgba(94,0,255,1) 0%, rgba(119,0,255,1) 35%, rgba(0,212,255,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-h2 {
-    color: white;
-    text-transform: uppercase;
-    font-size: 4rem;
-}
-
-
-a {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: black;
-}
-
 section {
     height: 100vh;
     width: auto;
@@ -41,88 +20,107 @@ section {
 
 .navbar {
     display: flex;
-    flex-flow: row nowrap;
-    list-style: none;
-    margin-inline: 1rem;
-    margin-top: 1rem;
-    font-size: 1.2rem;
+    flex-direction: row;
+    margin-left: 1em;
+    position: fixed;
 }
 
-.navbar li {
-    margin-left: 1rem;
+.nav-item {
+    margin-right: 1em;
+    margin-top: 1em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
 }
 
-.navbar li a:hover {
+.nav-item:hover {
     color: rgb(85, 0, 255);
-    border: 1px solid rgb(85, 0, 255);
-    padding: 2px;
+    background-color: rgb(195, 248, 249);
     transition: 0.5s;
 }
 
-
 .hero-container {
+    height: 100vh;
     display: flex;
-    justify-content: space-evenly;
-    flex-flow: row nowrap;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 30vh;
+    flex-flow: row nowrap;
 }
 
-.hero-image {
-    height: 16rem;
-    float: right;
+.main-image {
+    height: auto;
+    max-width: 50%;
+    margin-top: 8em;
 }
 
-.hero-sub {
-    font-weight: 200;
-    font-size: 1.5rem;
+.heading-container {
+    margin-top: 6em;
 }
 
-#portfolio {
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(119,0,255,1) 35%, rgba(0,212,255,1) 100%);
-    width: 100%;
+.main-header {
+    font-size: 4em;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, rgba(94,0,255,1) 0%, rgba(119,0,255,1) 35%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
 }
 
-.portfolio-title {
-    text-align: left;
-    margin-left: 2rem;
+#skills {
+    background: linear-gradient(90deg, rgba(94,0,255,1) 0%, rgba(119,0,255,1) 35%, rgba(0,212,255,1) 100%);
 }
 
-.portfolio-section {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.card {
-    border: 2px solid white;
-    height: 30rem;
-    width: 20rem;
-    margin-top: 8rem;
-}
-
-@media (max-width: 390px){
+@media screen and (max-width: 780px) {
     .hero-container {
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
+    }    
+
+    .main-header {
+        font-size: 4em;
     }
 
-    .hero-image {
-        height: 8rem;
-        margin-top: 2rem;
+    .hero-sub {
+        text-align: center;
     }
 
-    .card {
-        border: 2px solid white;
-        height: 25rem;
-        width: 20rem;
-        margin-top: 8rem;
+    .main-image {
+        margin-top: 1em;
     }
+}
 
-    .portfolio-section {
+@media screen and (max-width: 1000px) {
+    .main-header {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hero-container {
         display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }    
+
+    .main-header {
+        font-size: 2.5em;
     }
+
+    .heading-container {
+        margin-top: -10em;
+    }
+
+    .hero-sub {
+        text-align: center;
+    }
+
+    .main-image {
+        margin-top: 1em;
+    }
+
 }
