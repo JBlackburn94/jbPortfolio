@@ -32,14 +32,17 @@ h5 {
     font-size: 1.2em;
 }
 
+li {
+    list-style: none;
+}
 
-#navbar {
+.navbar {
     display: flex;
-    flex-direction: row;
-    margin-left: 1em;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
     position: fixed;
     width: 100%;
-    margin-left: 0;
 }
 
 .nav-coloured {
@@ -49,18 +52,45 @@ h5 {
     
 }
 
-#navbar a {
-    margin-right: 1em;
-    margin-top: 1em;
+.navbar a {
     font-size: 1.2em;
     text-transform: uppercase;
-    padding: 10px;
     font-weight: 200;
     color: white;
 }
 
-#navbar a:hover {
+.navbar a:hover {
     color: greenyellow;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: none;
+    background-color: white;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+
+.icon i {
+    font-size: 1.2em;
 }
 
 .hero-container {
@@ -255,6 +285,44 @@ h5 {
     .skill-name {
         color: white;
         text-align: center;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 3rem;
+        flex-direction: column;
+        background-color: rgb(85, 0, 255);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgb(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
 
