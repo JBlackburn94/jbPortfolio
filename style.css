@@ -27,6 +27,12 @@ h4 {
     font-size: 2em;
 }
 
+h5 {
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+
 #navbar {
     display: flex;
     flex-direction: row;
@@ -55,7 +61,6 @@ h4 {
 
 #navbar a:hover {
     color: greenyellow;
-    font-weight: 400;
 }
 
 .hero-container {
@@ -146,12 +151,37 @@ h4 {
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 2em;
+    margin-top: 1em;
+    text-align: center;
 }
 
 .portfolio-image {
     height: auto;
     width: 40%;
+}
+
+.portfolio-button {
+    padding: 10px 10px;
+    margin: 1em 1em;
+    border: 1px solid rgb(85, 0, 255);
+    background-color: rgb(85, 0, 255);
+    text-transform: uppercase;
+    border-radius: 10px;
+    width: 4em;
+}
+
+.portfolio-button a {
+    color: white;
+}
+
+.portfolio-button:hover {
+    background: linear-gradient(90deg, rgba(94,0,255,1) 0%, rgba(119,0,255,1) 35%, rgba(0,212,255,1) 100%);
+    border: none;
+}
+
+.tech-stack li {
+    list-style: none;
+    margin-top: 1em;
 }
 
 @media screen and (max-width: 780px) {
