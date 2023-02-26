@@ -107,7 +107,7 @@ h5 {
     height: 100vh;
 }
 
-.skills-heading {
+.gradient-heading {
     color: white;
     text-transform: uppercase;
     font-weight: 400;
@@ -149,7 +149,7 @@ h5 {
 .portfolio-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     margin-top: 1em;
     text-align: center;
@@ -182,6 +182,30 @@ h5 {
 .tech-stack li {
     list-style: none;
     margin-top: 1em;
+}
+
+#contact {
+    background: linear-gradient(90deg, rgba(94,0,255,1) 0%, rgba(119,0,255,1) 35%, rgba(0,212,255,1) 100%);
+    height: auto;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gradient-sub {
+    color: white;
+    font-weight: 200;
+}
+
+.contact-container p {
+    text-align: center;
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 @media screen and (max-width: 780px) {
